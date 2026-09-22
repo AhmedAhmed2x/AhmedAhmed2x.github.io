@@ -1,0 +1,710 @@
+/* =========================================
+   TIGER HOME HEALTH CARE
+   BASE STYLESHEET
+   ========================================= */
+
+
+/* -----------------------------------------
+   BASIC RESET
+   ----------------------------------------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* -----------------------------------------
+   DOCUMENT
+   ----------------------------------------- */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #172033;
+    background-color: #ffffff;
+}
+
+
+/* -----------------------------------------
+   IMAGES
+   ----------------------------------------- */
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* -----------------------------------------
+   LINKS
+   ----------------------------------------- */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* -----------------------------------------
+   LISTS
+   ----------------------------------------- */
+
+ul {
+    list-style: none;
+}
+
+
+/* -----------------------------------------
+   CONTAINER
+   ----------------------------------------- */
+
+.container {
+    width: min(1120px, 92%);
+    margin: 0 auto;
+}
+
+
+/* -----------------------------------------
+   TEMPORARY SECTION SPACING
+   ----------------------------------------- */
+
+section {
+    padding: 80px 0;
+}
+
+
+/* -----------------------------------------
+   HEADER
+   ----------------------------------------- */
+
+.site-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+.header-container {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+
+    min-height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+.brand-logo {
+    width: 180px;
+}
+
+
+.navigation-list {
+    display: flex;
+    gap: 25px;
+}
+
+
+.navigation-list a:hover {
+    color: #f58220;
+}
+
+
+.button {
+    display: inline-block;
+
+    padding: 14px 24px;
+
+    border-radius: 999px;
+
+    font-weight: 700;
+}
+
+
+.button-primary {
+    background-color: #f58220;
+    color: #ffffff;
+}
+
+
+.button-secondary {
+    border: 2px solid #172033;
+    color: #172033;
+}
+
+
+/* -----------------------------------------
+   HERO
+   ----------------------------------------- */
+
+.hero-section {
+    background-color: #f7f8fa;
+}
+
+
+.hero-container {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+    align-items: center;
+}
+
+
+.hero-content h1 {
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+
+.hero-description {
+    max-width: 600px;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+.hero-image-frame {
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+
+.hero-image-frame img {
+    width: 100%;
+}
+
+
+/* -----------------------------------------
+   SECTION HEADINGS
+   ----------------------------------------- */
+
+.section-label {
+    color: #f58220;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+
+.section-heading {
+    max-width: 750px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+
+.section-heading h2,
+.about-content h2,
+.contact-information h2,
+.cta-content h2 {
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+
+/* -----------------------------------------
+   BENEFITS
+   ----------------------------------------- */
+
+.benefits-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+
+.benefit-card {
+    padding: 30px;
+    border: 1px solid #eeeeee;
+    border-radius: 20px;
+    background-color: #ffffff;
+}
+
+
+.benefit-card h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+
+.benefit-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    background-color: #f58220;
+}
+
+
+/* -----------------------------------------
+   ABOUT
+   ----------------------------------------- */
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+
+.about-media img {
+    width: 100%;
+    border-radius: 30px;
+}
+
+
+/* -----------------------------------------
+   SERVICES
+   ----------------------------------------- */
+
+.services-section {
+    background-color: #f7f8fa;
+}
+
+
+.services-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+
+.service-card {
+    background-color: #ffffff;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    border: 1px solid #eeeeee;
+}
+
+
+.service-icon {
+    width: 55px;
+    height: 55px;
+
+    margin-bottom: 20px;
+
+    border-radius: 15px;
+
+    background-color: #f58220;
+}
+
+
+.service-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+
+.service-card p {
+    margin-bottom: 20px;
+}
+
+
+.service-card a {
+    color: #f58220;
+    font-weight: 700;
+}
+
+
+/* -----------------------------------------
+   WHO WE SERVE
+   ----------------------------------------- */
+
+.audience-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.audience-card {
+    padding: 35px;
+
+    border-radius: 20px;
+
+    background-color: #f7f8fa;
+}
+
+
+/* -----------------------------------------
+   HOW IT WORKS
+   ----------------------------------------- */
+
+.how-it-works-section {
+    background-color: #172033;
+    color: #ffffff;
+}
+
+
+.process-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+
+.process-step {
+    padding: 30px;
+}
+
+
+.process-number {
+    color: #f58220;
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    display: block;
+
+    margin-bottom: 15px;
+}
+
+
+/* -----------------------------------------
+   COMMUNITY
+   ----------------------------------------- */
+
+.community-grid {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+
+.community-media img {
+    width: 100%;
+    border-radius: 30px;
+}
+
+
+/* -----------------------------------------
+   INSURANCE
+   ----------------------------------------- */
+
+.insurance-section {
+    background-color: #f7f8fa;
+}
+
+
+.insurance-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.insurance-item {
+    background-color: #ffffff;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    font-weight: 700;
+}
+
+
+/* -----------------------------------------
+   CTA
+   ----------------------------------------- */
+
+.cta-section {
+    background-color: #f58220;
+    color: #ffffff;
+
+    text-align: center;
+}
+
+
+.cta-content {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+
+/* -----------------------------------------
+   CONTACT
+   ----------------------------------------- */
+
+.contact-grid {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 60px;
+}
+
+
+.contact-information address {
+    font-style: normal;
+}
+
+
+.contact-information p {
+    margin-bottom: 15px;
+}
+
+
+.contact-information a {
+    color: #f58220;
+    font-weight: 700;
+}
+
+
+.contact-form-container {
+    background-color: #f7f8fa;
+
+    padding: 35px;
+
+    border-radius: 25px;
+}
+
+
+.form-field {
+    margin-bottom: 20px;
+}
+
+
+.form-field label {
+    display: block;
+
+    font-weight: 700;
+
+    margin-bottom: 7px;
+}
+
+
+.form-field input,
+.form-field textarea {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #cccccc;
+
+    border-radius: 10px;
+
+    font: inherit;
+}
+
+
+/* -----------------------------------------
+   FOOTER
+   ----------------------------------------- */
+
+.site-footer {
+    background-color: #172033;
+
+    color: #ffffff;
+
+    padding: 70px 0 25px;
+}
+
+
+.footer-grid {
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr;
+
+    gap: 50px;
+}
+
+
+.footer-logo {
+    width: 180px;
+    margin-bottom: 20px;
+}
+
+
+.footer-grid h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+
+.footer-navigation li {
+    margin-bottom: 10px;
+}
+
+
+.footer-navigation a:hover {
+    color: #f58220;
+}
+
+
+.footer-bottom {
+    margin-top: 50px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid rgba(255,255,255,0.2);
+
+    text-align: center;
+}
+
+
+/* -----------------------------------------
+   TABLET
+   ----------------------------------------- */
+
+@media (max-width: 900px) {
+
+    .navigation-list {
+        gap: 15px;
+    }
+
+
+    .benefits-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .services-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .process-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .insurance-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* -----------------------------------------
+   MOBILE
+   ----------------------------------------- */
+
+@media (max-width: 700px) {
+
+    section {
+        padding: 60px 0;
+    }
+
+
+    .header-container {
+        flex-wrap: wrap;
+
+        padding: 20px 0;
+    }
+
+
+    .main-navigation {
+        order: 3;
+
+        width: 100%;
+    }
+
+
+    .navigation-list {
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+
+    .header-cta {
+        display: none;
+    }
+
+
+    .hero-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .community-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .benefits-grid,
+    .services-grid,
+    .audience-grid,
+    .process-grid,
+    .insurance-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+}

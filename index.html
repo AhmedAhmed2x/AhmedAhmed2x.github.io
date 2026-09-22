@@ -2,19 +2,1229 @@
 <html lang="en">
 
 <head>
+
+    <!-- Basic document information -->
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <!-- Makes the website responsive on phones and tablets -->
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <title>My Business</title>
+    <!-- Website title shown in the browser tab -->
+    <title>
+        Tiger Home Health Care, LLC
+    </title>
+
+    <!-- Website description for search engines -->
+    <meta
+        name="description"
+        content="Tiger Home Health Care, LLC provides compassionate support and care services in Cleveland, Ohio."
+    >
+
+    <!-- Main stylesheet -->
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
 </head>
+
 
 <body>
 
-    <h1>Welcome to My Business</h1>
+    <!-- =========================================
+         HEADER
+         ========================================= -->
 
-    <p>This is my new website.</p>
+    <header class="site-header">
+
+        <div class="header-container">
+
+            <!-- Company logo -->
+            <a
+                href="#home"
+                class="brand"
+            >
+
+                <img
+                    src="assets/images/logo/tiger-logo.png"
+                    alt="Tiger Home Health Care, LLC"
+                    class="brand-logo"
+                >
+
+            </a>
+
+
+            <!-- Main navigation -->
+            <nav
+                class="main-navigation"
+                aria-label="Main navigation"
+            >
+
+                <ul class="navigation-list">
+
+                    <li>
+                        <a href="#home">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#about">
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#services">
+                            Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#who-we-serve">
+                            Who We Serve
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#contact">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+
+            <!-- Header call-to-action -->
+            <a
+                href="#contact"
+                class="button button-primary header-cta"
+            >
+                Get Started
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
+         MAIN WEBSITE CONTENT
+         ========================================= -->
+
+    <main>
+
+
+        <!-- =====================================
+             HERO
+             ===================================== -->
+
+        <section
+            id="home"
+            class="hero-section"
+        >
+
+            <div class="hero-container">
+
+                <!-- Hero text -->
+                <div class="hero-content">
+
+                    <p class="section-label">
+                        TIGER HOME HEALTH CARE, LLC
+                    </p>
+
+                    <h1>
+                        Compassionate Care.
+                        <br>
+                        Right at Home.
+                    </h1>
+
+                    <p class="hero-description">
+                        Providing compassionate support designed
+                        to help individuals live safely, comfortably,
+                        and independently at home.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a
+                            href="#contact"
+                            class="button button-primary"
+                        >
+                            Get Started
+                        </a>
+
+                        <a
+                            href="#contact"
+                            class="button button-secondary"
+                        >
+                            Contact Us
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Hero image -->
+                <div class="hero-media">
+
+                    <div class="hero-image-frame">
+
+                        <img
+                            src="assets/images/hero/hero-caregiver.jpg"
+                            alt="Caregiver providing compassionate support at home"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             QUICK BENEFITS
+             ===================================== -->
+
+        <section
+            class="benefits-section"
+            aria-label="Why choose Tiger Home Health Care"
+        >
+
+            <div class="container">
+
+                <div class="benefits-grid">
+
+
+                    <article class="benefit-card">
+
+                        <div
+                            class="benefit-icon"
+                            aria-hidden="true"
+                        >
+                            <!-- Future icon -->
+                        </div>
+
+                        <h2>
+                            Compassionate Support
+                        </h2>
+
+                        <p>
+                            Support delivered with respect,
+                            dignity, and compassion.
+                        </p>
+
+                    </article>
+
+
+                    <article class="benefit-card">
+
+                        <div
+                            class="benefit-icon"
+                            aria-hidden="true"
+                        >
+                            <!-- Future icon -->
+                        </div>
+
+                        <h2>
+                            Personalized Care
+                        </h2>
+
+                        <p>
+                            Services designed around each
+                            individual's needs and routines.
+                        </p>
+
+                    </article>
+
+
+                    <article class="benefit-card">
+
+                        <div
+                            class="benefit-icon"
+                            aria-hidden="true"
+                        >
+                            <!-- Future icon -->
+                        </div>
+
+                        <h2>
+                            Support at Home
+                        </h2>
+
+                        <p>
+                            Helping individuals remain comfortable
+                            in their home environment.
+                        </p>
+
+                    </article>
+
+
+                    <article class="benefit-card">
+
+                        <div
+                            class="benefit-icon"
+                            aria-hidden="true"
+                        >
+                            <!-- Future icon -->
+                        </div>
+
+                        <h2>
+                            Family-Focused Service
+                        </h2>
+
+                        <p>
+                            Working respectfully with individuals,
+                            families, and caregivers.
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             ABOUT
+             ===================================== -->
+
+        <section
+            id="about"
+            class="about-section"
+        >
+
+            <div class="container">
+
+                <div class="about-grid">
+
+
+                    <div class="about-media">
+
+                        <img
+                            src="assets/images/about/about-tiger.jpg"
+                            alt="Tiger Home Health Care support"
+                        >
+
+                    </div>
+
+
+                    <div class="about-content">
+
+                        <p class="section-label">
+                            ABOUT TIGER
+                        </p>
+
+                        <h2>
+                            Care That Feels Like Home
+                        </h2>
+
+                        <p>
+                            Tiger Home Health Care, LLC is committed
+                            to providing compassionate support that
+                            helps individuals receive care and
+                            assistance in the comfort of home.
+                        </p>
+
+                        <p>
+                            Our approach focuses on respect,
+                            dignity, compassion, and individualized
+                            support.
+                        </p>
+
+                        <a
+                            href="#contact"
+                            class="button button-primary"
+                        >
+                            Learn More
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             SERVICES
+             ===================================== -->
+
+        <section
+            id="services"
+            class="services-section"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="section-label">
+                        OUR SERVICES
+                    </p>
+
+                    <h2>
+                        Support Designed Around You
+                    </h2>
+
+                    <p>
+                        Explore the support services available
+                        through Tiger Home Health Care.
+                    </p>
+
+                </div>
+
+
+                <div class="services-grid">
+
+
+                    <!-- Service 1 -->
+
+                    <article class="service-card">
+
+                        <div
+                            class="service-icon"
+                            aria-hidden="true"
+                        >
+                            <!-- Future SVG icon -->
+                        </div>
+
+                        <h3>
+                            Personal Care
+                        </h3>
+
+                        <p>
+                            Service description goes here.
+                        </p>
+
+                        <a href="#contact">
+                            Learn More
+                        </a>
+
+                    </article>
+
+
+                    <!-- Service 2 -->
+
+                    <article class="service-card">
+
+                        <div
+                            class="service-icon"
+                            aria-hidden="true"
+                        >
+                            <!-- Future SVG icon -->
+                        </div>
+
+                        <h3>
+                            Meal Preparation
+                        </h3>
+
+                        <p>
+                            Service description goes here.
+                        </p>
+
+                        <a href="#contact">
+                            Learn More
+                        </a>
+
+                    </article>
+
+
+                    <!-- Service 3 -->
+
+                    <article class="service-card">
+
+                        <div
+                            class="service-icon"
+                            aria-hidden="true"
+                        >
+                            <!-- Future SVG icon -->
+                        </div>
+
+                        <h3>
+                            Personal Assistance
+                        </h3>
+
+                        <p>
+                            Service description goes here.
+                        </p>
+
+                        <a href="#contact">
+                            Learn More
+                        </a>
+
+                    </article>
+
+
+                    <!-- Service 4 -->
+
+                    <article class="service-card">
+
+                        <div
+                            class="service-icon"
+                            aria-hidden="true"
+                        >
+                            <!-- Future SVG icon -->
+                        </div>
+
+                        <h3>
+                            Respite Care
+                        </h3>
+
+                        <p>
+                            Service description goes here.
+                        </p>
+
+                        <a href="#contact">
+                            Learn More
+                        </a>
+
+                    </article>
+
+
+                    <!-- Service 5 -->
+
+                    <article class="service-card">
+
+                        <div
+                            class="service-icon"
+                            aria-hidden="true"
+                        >
+                            <!-- Future SVG icon -->
+                        </div>
+
+                        <h3>
+                            Homemaking
+                        </h3>
+
+                        <p>
+                            Service description goes here.
+                        </p>
+
+                        <a href="#contact">
+                            Learn More
+                        </a>
+
+                    </article>
+
+
+                    <!-- Service 6 -->
+
+                    <article class="service-card">
+
+                        <div
+                            class="service-icon"
+                            aria-hidden="true"
+                        >
+                            <!-- Future SVG icon -->
+                        </div>
+
+                        <h3>
+                            Medication Reminders
+                        </h3>
+
+                        <p>
+                            Service description goes here.
+                        </p>
+
+                        <a href="#contact">
+                            Learn More
+                        </a>
+
+                    </article>
+
+
+                    <!-- Service 7 -->
+
+                    <article class="service-card">
+
+                        <div
+                            class="service-icon"
+                            aria-hidden="true"
+                        >
+                            <!-- Future SVG icon -->
+                        </div>
+
+                        <h3>
+                            Errands
+                        </h3>
+
+                        <p>
+                            Service description goes here.
+                        </p>
+
+                        <a href="#contact">
+                            Learn More
+                        </a>
+
+                    </article>
+
+
+                    <!-- Service 8 -->
+
+                    <article class="service-card">
+
+                        <div
+                            class="service-icon"
+                            aria-hidden="true"
+                        >
+                            <!-- Future SVG icon -->
+                        </div>
+
+                        <h3>
+                            Companionship
+                        </h3>
+
+                        <p>
+                            Service description goes here.
+                        </p>
+
+                        <a href="#contact">
+                            Learn More
+                        </a>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             WHO WE SERVE
+             ===================================== -->
+
+        <section
+            id="who-we-serve"
+            class="who-we-serve-section"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="section-label">
+                        WHO WE SERVE
+                    </p>
+
+                    <h2>
+                        Support for Individuals and Families
+                    </h2>
+
+                    <p>
+                        Placeholder content. Final service
+                        populations should be confirmed before
+                        publication.
+                    </p>
+
+                </div>
+
+
+                <div class="audience-grid">
+
+                    <article class="audience-card">
+
+                        <h3>
+                            Individuals
+                        </h3>
+
+                        <p>
+                            Placeholder description.
+                        </p>
+
+                    </article>
+
+
+                    <article class="audience-card">
+
+                        <h3>
+                            Families
+                        </h3>
+
+                        <p>
+                            Placeholder description.
+                        </p>
+
+                    </article>
+
+
+                    <article class="audience-card">
+
+                        <h3>
+                            Caregivers
+                        </h3>
+
+                        <p>
+                            Placeholder description.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             HOW IT WORKS
+             ===================================== -->
+
+        <section
+            class="how-it-works-section"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="section-label">
+                        HOW IT WORKS
+                    </p>
+
+                    <h2>
+                        Getting Started Is Simple
+                    </h2>
+
+                </div>
+
+
+                <div class="process-grid">
+
+
+                    <article class="process-step">
+
+                        <span class="process-number">
+                            01
+                        </span>
+
+                        <h3>
+                            Contact Us
+                        </h3>
+
+                        <p>
+                            Reach out to our team to begin
+                            the conversation.
+                        </p>
+
+                    </article>
+
+
+                    <article class="process-step">
+
+                        <span class="process-number">
+                            02
+                        </span>
+
+                        <h3>
+                            Discuss Your Needs
+                        </h3>
+
+                        <p>
+                            Tell us about the support you
+                            are looking for.
+                        </p>
+
+                    </article>
+
+
+                    <article class="process-step">
+
+                        <span class="process-number">
+                            03
+                        </span>
+
+                        <h3>
+                            Review Available Services
+                        </h3>
+
+                        <p>
+                            Our team can discuss available
+                            services and next steps.
+                        </p>
+
+                    </article>
+
+
+                    <article class="process-step">
+
+                        <span class="process-number">
+                            04
+                        </span>
+
+                        <h3>
+                            Begin Services
+                        </h3>
+
+                        <p>
+                            Move forward with the appropriate
+                            next steps.
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             PHOTO / COMMUNITY SECTION
+             ===================================== -->
+
+        <section
+            class="community-section"
+        >
+
+            <div class="container">
+
+                <div class="community-grid">
+
+
+                    <div class="community-content">
+
+                        <p class="section-label">
+                            TIGER HOME HEALTH CARE
+                        </p>
+
+                        <h2>
+                            Compassionate Support.
+                            Right at Home.
+                        </h2>
+
+                        <p>
+                            Placeholder content for the company's
+                            community-focused message.
+                        </p>
+
+                        <a
+                            href="#contact"
+                            class="button button-primary"
+                        >
+                            Get Started
+                        </a>
+
+                    </div>
+
+
+                    <div class="community-media">
+
+                        <img
+                            src="assets/images/services/services-care.jpg"
+                            alt="Tiger Home Health Care support"
+                        >
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             INSURANCE
+             ===================================== -->
+
+        <section
+            class="insurance-section"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="section-label">
+                        INSURANCE & PAYMENT
+                    </p>
+
+                    <h2>
+                        Insurance Plans
+                    </h2>
+
+                    <p>
+                        Accepted plans and payment information
+                        should be verified with Tiger Home Health
+                        Care before publication.
+                    </p>
+
+                </div>
+
+
+                <div class="insurance-grid">
+
+                    <div class="insurance-item">
+                        CareSource
+                    </div>
+
+                    <div class="insurance-item">
+                        Anthem
+                    </div>
+
+                    <div class="insurance-item">
+                        Molina
+                    </div>
+
+                    <div class="insurance-item">
+                        Buckeye Health Plan
+                    </div>
+
+                    <div class="insurance-item">
+                        Passport Waivers
+                    </div>
+
+                    <div class="insurance-item">
+                        Long Term Care
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             CALL TO ACTION
+             ===================================== -->
+
+        <section
+            class="cta-section"
+        >
+
+            <div class="container">
+
+                <div class="cta-content">
+
+                    <p class="section-label">
+                        READY TO GET STARTED?
+                    </p>
+
+                    <h2>
+                        Let's Talk About Your Care Needs.
+                    </h2>
+
+                    <p>
+                        Contact Tiger Home Health Care
+                        to learn more.
+                    </p>
+
+                    <a
+                        href="#contact"
+                        class="button button-primary"
+                    >
+                        Contact Us
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             CONTACT
+             ===================================== -->
+
+        <section
+            id="contact"
+            class="contact-section"
+        >
+
+            <div class="container">
+
+                <div class="contact-grid">
+
+
+                    <!-- Contact information -->
+
+                    <div class="contact-information">
+
+                        <p class="section-label">
+                            CONTACT TIGER
+                        </p>
+
+                        <h2>
+                            We're Here to Help
+                        </h2>
+
+                        <p>
+                            Contact our team to learn more
+                            about available services.
+                        </p>
+
+
+                        <address>
+
+                            <p>
+                                <strong>
+                                    Tiger Home Health Care, LLC
+                                </strong>
+                            </p>
+
+                            <p>
+                                11811 Shaker Blvd, Suite 120
+                                <br>
+                                Cleveland, OH 44120
+                            </p>
+
+                            <p>
+                                <strong>Phone:</strong>
+
+                                <a href="tel:+12164903633">
+                                    216-490-3633
+                                </a>
+                            </p>
+
+                            <p>
+                                <strong>Fax:</strong>
+
+                                877-335-2599
+                            </p>
+
+                        </address>
+
+                    </div>
+
+
+                    <!-- Contact form -->
+
+                    <div class="contact-form-container">
+
+                        <h2>
+                            Request Services
+                        </h2>
+
+                        <!--
+                            IMPORTANT:
+
+                            This form is currently only the
+                            HTML foundation.
+
+                            It does NOT securely submit information
+                            anywhere yet.
+
+                            A backend/form-processing service
+                            will need to be connected later.
+                        -->
+
+                        <form
+                            action="#"
+                            method="post"
+                            class="contact-form"
+                        >
+
+                            <div class="form-field">
+
+                                <label for="name">
+                                    Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    autocomplete="name"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-field">
+
+                                <label for="phone">
+                                    Phone
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    autocomplete="tel"
+                                >
+
+                            </div>
+
+
+                            <div class="form-field">
+
+                                <label for="email">
+                                    Email
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    autocomplete="email"
+                                >
+
+                            </div>
+
+
+                            <div class="form-field">
+
+                                <label for="message">
+                                    How can we help?
+                                </label>
+
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    rows="6"
+                                ></textarea>
+
+                            </div>
+
+
+                            <button
+                                type="submit"
+                                class="button button-primary"
+                            >
+                                Submit Request
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================================
+         FOOTER
+         ========================================= -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+
+                <div class="footer-brand">
+
+                    <img
+                        src="assets/images/logo/tiger-logo.png"
+                        alt="Tiger Home Health Care, LLC"
+                        class="footer-logo"
+                    >
+
+                    <p>
+                        Compassionate Care.
+                        Right at Home.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-contact">
+
+                    <h2>
+                        Contact
+                    </h2>
+
+                    <p>
+                        11811 Shaker Blvd, Suite 120
+                        <br>
+                        Cleveland, OH 44120
+                    </p>
+
+                    <p>
+                        <a href="tel:+12164903633">
+                            216-490-3633
+                        </a>
+                    </p>
+
+                </div>
+
+
+                <div class="footer-navigation">
+
+                    <h2>
+                        Quick Links
+                    </h2>
+
+                    <ul>
+
+                        <li>
+                            <a href="#home">
+                                Home
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#about">
+                                About
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#services">
+                                Services
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#contact">
+                                Contact
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    &copy; 2026 Tiger Home Health Care, LLC.
+                    All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Future JavaScript -->
+    <script src="script.js"></script>
 
 </body>
 

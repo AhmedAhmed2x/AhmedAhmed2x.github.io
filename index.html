@@ -1,40 +1,1122 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <!-- Basic document information -->
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tiger Home Health Care, LLC provides compassionate in-home support services in Cleveland, Ohio, helping individuals maintain dignity, independence, and quality of life at home.">
+    <meta name="theme-color" content="#ff6a00">
 
-    <!-- Makes the website responsive on phones and tablets -->
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <!-- Website title shown in the browser tab -->
-    <title>
-        Tiger Home Health Care, LLC
-    </title>
-
-    <!-- Website description for search engines -->
-    <meta
-        name="description"
-        content="Tiger Home Health Care, LLC provides compassionate support and care services in Cleveland, Ohio."
-    >
+    <title>Tiger Home Health Care, LLC | Compassionate Care. Right at Home.</title>
 
     <!-- Main stylesheet -->
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
+    <link rel="stylesheet" href="style.css">
 
+    <!-- Optional modern icon library. Remove this line if you want a completely local/offline site. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Basic fallback styling so the HTML remains presentable before the external CSS is finished. -->
+    <style>
+        :root {
+            --tiger-orange: #ff6a00;
+            --tiger-orange-dark: #d94f00;
+            --tiger-navy: #10222d;
+            --tiger-cream: #fffaf5;
+            --tiger-gray: #66727a;
+            --white: #ffffff;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            margin: 0;
+            font-family: Inter, Arial, Helvetica, sans-serif;
+            color: var(--tiger-navy);
+            background: var(--white);
+            line-height: 1.6;
+        }
+
+        img { max-width: 100%; display: block; }
+
+        a { color: inherit; }
+
+        .skip-link {
+            position: fixed;
+            left: 1rem;
+            top: -100px;
+            z-index: 9999;
+            background: var(--tiger-navy);
+            color: white;
+            padding: .75rem 1rem;
+            border-radius: .5rem;
+        }
+
+        .skip-link:focus { top: 1rem; }
+
+        .container {
+            width: min(1180px, calc(100% - 2rem));
+            margin-inline: auto;
+        }
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,.94);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(16,34,45,.08);
+        }
+
+        .header-container {
+            min-height: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+        }
+
+        .brand-logo { width: 190px; height: auto; }
+
+        .navigation-list {
+            display: flex;
+            align-items: center;
+            gap: 1.35rem;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navigation-list a {
+            text-decoration: none;
+            font-weight: 700;
+            font-size: .95rem;
+        }
+
+        .navigation-list a:hover { color: var(--tiger-orange); }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: .5rem;
+            min-height: 48px;
+            padding: .75rem 1.25rem;
+            border-radius: 999px;
+            text-decoration: none;
+            border: 2px solid transparent;
+            font-weight: 800;
+            cursor: pointer;
+            transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 25px rgba(16,34,45,.14);
+        }
+
+        .button-primary {
+            background: var(--tiger-orange);
+            color: white;
+        }
+
+        .button-secondary {
+            background: white;
+            color: var(--tiger-navy);
+            border-color: rgba(16,34,45,.16);
+        }
+
+        .hero-section {
+            background:
+                radial-gradient(circle at 90% 10%, rgba(255,106,0,.16), transparent 32%),
+                linear-gradient(135deg, #fffaf5 0%, #fff 55%);
+            padding: clamp(4rem, 8vw, 7rem) 0;
+            overflow: hidden;
+        }
+
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: clamp(2rem, 5vw, 5rem);
+        }
+
+        .section-label {
+            color: var(--tiger-orange-dark);
+            font-size: .8rem;
+            letter-spacing: .14em;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin: 0 0 .75rem;
+        }
+
+        .hero-content h1,
+        .section-heading h2,
+        .about-content h2,
+        .community-content h2,
+        .contact-information h2 {
+            line-height: 1.08;
+            letter-spacing: -.035em;
+            margin: 0;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(2.8rem, 6vw, 5.5rem);
+            max-width: 720px;
+        }
+
+        .hero-content h1 span { color: var(--tiger-orange); }
+
+        .hero-description {
+            max-width: 620px;
+            font-size: 1.15rem;
+            color: var(--tiger-gray);
+            margin: 1.5rem 0 2rem;
+        }
+
+        .hero-buttons { display: flex; flex-wrap: wrap; gap: .75rem; }
+
+        .hero-media img {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            border-radius: 2rem;
+            box-shadow: 0 30px 70px rgba(16,34,45,.18);
+        }
+
+        .benefits-section { padding: 2rem 0 5rem; }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+
+        .benefit-card,
+        .service-card,
+        .audience-card,
+        .process-step,
+        .insurance-item {
+            background: white;
+            border: 1px solid rgba(16,34,45,.08);
+            border-radius: 1.35rem;
+            padding: 1.5rem;
+            box-shadow: 0 12px 40px rgba(16,34,45,.06);
+        }
+
+        .benefit-icon,
+        .service-icon {
+            width: 52px;
+            height: 52px;
+            display: grid;
+            place-items: center;
+            border-radius: 16px;
+            background: rgba(255,106,0,.11);
+            color: var(--tiger-orange);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-section,
+        .who-we-serve-section,
+        .insurance-section,
+        .contact-section {
+            padding: clamp(4.5rem, 8vw, 7rem) 0;
+        }
+
+        .about-grid,
+        .community-grid,
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: clamp(2rem, 6vw, 5rem);
+            align-items: center;
+        }
+
+        .about-media img,
+        .community-media img {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            border-radius: 2rem;
+        }
+
+        .section-heading {
+            max-width: 720px;
+            margin-bottom: 2.5rem;
+        }
+
+        .section-heading h2,
+        .about-content h2,
+        .community-content h2,
+        .contact-information h2 {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+        }
+
+        .section-heading > p:last-child,
+        .about-content > p,
+        .community-content > p,
+        .contact-information > p {
+            color: var(--tiger-gray);
+        }
+
+        .services-section {
+            padding: clamp(4.5rem, 8vw, 7rem) 0;
+            background: var(--tiger-cream);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+
+        .service-card {
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 45px rgba(16,34,45,.12);
+        }
+
+        .service-card h3,
+        .audience-card h3,
+        .process-step h3 { margin: 0 0 .5rem; }
+
+        .service-card p,
+        .audience-card p,
+        .process-step p { color: var(--tiger-gray); }
+
+        .service-card a {
+            color: var(--tiger-orange-dark);
+            font-weight: 800;
+            text-decoration: none;
+        }
+
+        .audience-grid,
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .process-grid { grid-template-columns: repeat(4, 1fr); }
+
+        .process-number {
+            display: inline-grid;
+            place-items: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: var(--tiger-orange);
+            color: white;
+            font-weight: 900;
+            margin-bottom: 1rem;
+        }
+
+        .community-section {
+            padding: clamp(4.5rem, 8vw, 7rem) 0;
+            background: var(--tiger-navy);
+            color: white;
+        }
+
+        .community-section .section-label { color: #ff9b52; }
+        .community-content > p { color: rgba(255,255,255,.78); }
+
+        .insurance-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1rem;
+        }
+
+        .insurance-item {
+            min-height: 110px;
+            display: grid;
+            place-items: center;
+            text-align: center;
+            font-weight: 900;
+        }
+
+        .insurance-item i {
+            display: block;
+            font-size: 1.7rem;
+            color: var(--tiger-orange);
+            margin-bottom: .4rem;
+        }
+
+        .cta-section {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, var(--tiger-orange), #ff8b3d);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-content { max-width: 760px; margin: auto; }
+        .cta-section .section-label { color: white; }
+        .cta-section .button-primary { background: var(--tiger-navy); }
+
+        address { font-style: normal; }
+
+        .contact-form-container {
+            background: white;
+            padding: clamp(1.5rem, 4vw, 2.5rem);
+            border-radius: 1.75rem;
+            box-shadow: 0 20px 60px rgba(16,34,45,.1);
+            border: 1px solid rgba(16,34,45,.08);
+        }
+
+        .contact-form {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .form-field { display: grid; gap: .4rem; }
+
+        .form-field label { font-weight: 800; }
+
+        .form-field input,
+        .form-field textarea {
+            width: 100%;
+            box-sizing: border-box;
+            border: 1px solid #d9dfe2;
+            border-radius: .9rem;
+            padding: .9rem 1rem;
+            font: inherit;
+            background: #fbfcfd;
+        }
+
+        .form-field input:focus,
+        .form-field textarea:focus {
+            outline: 3px solid rgba(255,106,0,.18);
+            border-color: var(--tiger-orange);
+        }
+
+        .site-footer {
+            background: #0a171e;
+            color: white;
+            padding: 4rem 0 1.5rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .footer-logo { width: 190px; margin-bottom: 1rem; }
+
+        .footer-navigation ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-navigation li { margin: .5rem 0; }
+
+        .footer-navigation a {
+            color: rgba(255,255,255,.78);
+            text-decoration: none;
+        }
+
+        .footer-navigation a:hover { color: white; }
+
+        .footer-bottom {
+            margin-top: 3rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid rgba(255,255,255,.12);
+            color: rgba(255,255,255,.62);
+            font-size: .9rem;
+        }
+
+        @media (max-width: 950px) {
+            .main-navigation { display: none; }
+            .hero-container,
+            .about-grid,
+            .community-grid,
+            .contact-grid { grid-template-columns: 1fr; }
+
+            .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .insurance-grid { grid-template-columns: repeat(2, 1fr); }
+            .process-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 600px) {
+            .header-cta { display: none; }
+            .brand-logo { width: 155px; }
+            .benefits-grid,
+            .services-grid,
+            .audience-grid,
+            .process-grid,
+            .insurance-grid,
+            .footer-grid { grid-template-columns: 1fr; }
+
+            .hero-section { padding-top: 3.5rem; }
+            .hero-content h1 { font-size: clamp(2.5rem, 13vw, 4rem); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after {
+                animation-duration: .01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: .01ms !important;
+            }
+        }
+    </style>
 </head>
 
-
 <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
     <!-- =========================================
+         HEADER / NAVIGATION
+    ========================================== -->
+    <header class="site-header">
+        <div class="container header-container">
+
+            <a href="#home" class="brand" aria-label="Tiger Home Health Care home">
+                <img
+                    src="assets/images/logo/tiger-logo.png"
+                    alt="Tiger Home Health Care, LLC logo"
+                    class="brand-logo"
+                >
+            </a>
+
+            <nav class="main-navigation" aria-label="Main navigation">
+                <ul class="navigation-list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#who-we-serve">Who We Serve</a></li>
+                    <li><a href="#insurance">Insurance</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <a href="tel:+12168206422" class="button button-primary header-cta">
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                24/7 Support
+            </a>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+        <!-- =========================================
+             HERO
+        ========================================== -->
+        <section id="home" class="hero-section">
+            <div class="container hero-container">
+
+                <div class="hero-content">
+                    <p class="section-label">Tiger Home Health Care, LLC</p>
+
+                    <h1>
+                        Compassionate Care.
+                        <br>
+                        <span>Right at Home.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Personalized in-home support that promotes independence,
+                        dignity, comfort, and a better quality of life.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#contact" class="button button-primary">
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                            Get Started
+                        </a>
+
+                        <a href="tel:+12164903633" class="button button-secondary">
+                            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                            216-490-3633
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-media">
+                    <img
+                        src="assets/images/hero/hero-caregiver.jpg"
+                        alt="Caregiver providing compassionate support to an older adult at home"
+                    >
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================
+             TRUST / BENEFITS
+        ========================================== -->
+        <section class="benefits-section" aria-label="Why families choose Tiger Home Health Care">
+            <div class="container">
+                <div class="benefits-grid">
+
+                    <article class="benefit-card">
+                        <div class="benefit-icon"><i class="fa-solid fa-heart" aria-hidden="true"></i></div>
+                        <h2>Compassionate Support</h2>
+                        <p>Support delivered with respect, dignity, and compassion.</p>
+                    </article>
+
+                    <article class="benefit-card">
+                        <div class="benefit-icon"><i class="fa-solid fa-user-check" aria-hidden="true"></i></div>
+                        <h2>Personalized Care</h2>
+                        <p>Services designed around each individual's needs and routines.</p>
+                    </article>
+
+                    <article class="benefit-card">
+                        <div class="benefit-icon"><i class="fa-solid fa-house" aria-hidden="true"></i></div>
+                        <h2>Support at Home</h2>
+                        <p>Helping individuals remain comfortable in their home environment.</p>
+                    </article>
+
+                    <article class="benefit-card">
+                        <div class="benefit-icon"><i class="fa-solid fa-people-roof" aria-hidden="true"></i></div>
+                        <h2>Family-Focused</h2>
+                        <p>Working respectfully with individuals, families, and caregivers.</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================
+             ABOUT
+        ========================================== -->
+        <section id="about" class="about-section">
+            <div class="container about-grid">
+
+                <div class="about-media">
+                    <img
+                        src="assets/images/about/about-tiger.jpg"
+                        alt="Tiger Home Health Care caregiver supporting a client"
+                        loading="lazy"
+                    >
+                </div>
+
+                <div class="about-content">
+                    <p class="section-label">About Tiger</p>
+
+                    <h2>Care That Feels Like Home.</h2>
+
+                    <p>
+                        Tiger Home Health Care, LLC provides compassionate support
+                        designed to help individuals live safely, comfortably,
+                        and independently at home.
+                    </p>
+
+                    <p>
+                        Our approach centers on dignity, respect, compassion,
+                        individualized support, and helping families feel confident
+                        that their loved ones are treated with care.
+                    </p>
+
+                    <p>
+                        We are based at <strong>11811 Shaker Blvd, Suite 120,
+                        Cleveland, Ohio 44120</strong>.
+                    </p>
+
+                    <a href="#services" class="button button-primary">
+                        Explore Our Services
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =========================================
+             SERVICES
+        ========================================== -->
+        <section id="services" class="services-section">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">Our Services</p>
+                    <h2>Support Designed Around You.</h2>
+                    <p>
+                        Our services are focused on practical daily support,
+                        comfort, independence, and quality of life at home.
+                    </p>
+                </div>
+
+                <div class="services-grid">
+
+                    <article class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-person" aria-hidden="true"></i></div>
+                        <h3>Personal Care</h3>
+                        <p>Support with bathing, grooming, dressing, and personal hygiene.</p>
+                        <a href="#contact">Ask About This Service →</a>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-utensils" aria-hidden="true"></i></div>
+                        <h3>Meal Preparation</h3>
+                        <p>Nutritious meal preparation to support healthy daily living.</p>
+                        <a href="#contact">Ask About This Service →</a>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-hands-helping" aria-hidden="true"></i></div>
+                        <h3>Personal Assistance</h3>
+                        <p>Assistance with daily activities and personal needs.</p>
+                        <a href="#contact">Ask About This Service →</a>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-people-arrows" aria-hidden="true"></i></div>
+                        <h3>Respite Care</h3>
+                        <p>Temporary support that gives family caregivers time to rest and recharge.</p>
+                        <a href="#contact">Ask About This Service →</a>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-house-chimney" aria-hidden="true"></i></div>
+                        <h3>Homemaking</h3>
+                        <p>Light housekeeping, laundry, and home organization support.</p>
+                        <a href="#contact">Ask About This Service →</a>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-pills" aria-hidden="true"></i></div>
+                        <h3>Medication Reminders</h3>
+                        <p>Timely reminders to help clients stay on track with their medication routines.</p>
+                        <a href="#contact">Ask About This Service →</a>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-bag-shopping" aria-hidden="true"></i></div>
+                        <h3>Errands</h3>
+                        <p>Support with grocery shopping, pickups, and other daily errands.</p>
+                        <a href="#contact">Ask About This Service →</a>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-user-group" aria-hidden="true"></i></div>
+                        <h3>Companionship</h3>
+                        <p>Meaningful companionship and emotional support that helps reduce isolation.</p>
+                        <a href="#contact">Ask About This Service →</a>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i></div>
+                        <h3>Appointment Support</h3>
+                        <p>Helping clients get ready for appointments and accompanying them for support.</p>
+                        <a href="#contact">Ask About This Service →</a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================
+             WHO WE SERVE
+        ========================================== -->
+        <section id="who-we-serve" class="who-we-serve-section">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">Who We Serve</p>
+                    <h2>Support for Individuals and Families.</h2>
+                    <p>
+                        Tiger Home Health Care works with individuals, families,
+                        and caregivers who are looking for dependable support at home.
+                    </p>
+                </div>
+
+                <div class="audience-grid">
+                    <article class="audience-card">
+                        <h3>Individuals</h3>
+                        <p>
+                            Personalized daily support focused on comfort,
+                            dignity, independence, and quality of life.
+                        </p>
+                    </article>
+
+                    <article class="audience-card">
+                        <h3>Families</h3>
+                        <p>
+                            Practical support that can help families coordinate
+                            day-to-day needs for their loved ones.
+                        </p>
+                    </article>
+
+                    <article class="audience-card">
+                        <h3>Caregivers</h3>
+                        <p>
+                            Respite and supportive services designed to complement
+                            the work of family caregivers.
+                        </p>
+                    </article>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =========================================
+             HOW IT WORKS
+        ========================================== -->
+        <section class="how-it-works-section">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">Getting Started</p>
+                    <h2>A Simple Path to Getting Support.</h2>
+                </div>
+
+                <div class="process-grid">
+
+                    <article class="process-step">
+                        <span class="process-number">01</span>
+                        <h3>Contact Us</h3>
+                        <p>Reach out to the Tiger Home Health Care team.</p>
+                    </article>
+
+                    <article class="process-step">
+                        <span class="process-number">02</span>
+                        <h3>Discuss Your Needs</h3>
+                        <p>Tell us about the support you or your loved one is looking for.</p>
+                    </article>
+
+                    <article class="process-step">
+                        <span class="process-number">03</span>
+                        <h3>Review Services</h3>
+                        <p>Discuss available services, insurance, and next steps.</p>
+                    </article>
+
+                    <article class="process-step">
+                        <span class="process-number">04</span>
+                        <h3>Begin Services</h3>
+                        <p>Move forward with the appropriate service and care plan.</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================
+             COMMUNITY / IMAGE FEATURE
+        ========================================== -->
+        <section class="community-section">
+            <div class="container community-grid">
+
+                <div class="community-content">
+                    <p class="section-label">Tiger Home Health Care</p>
+                    <h2>We Treat Your Loved Ones Like Family.</h2>
+                    <p>
+                        Our goal is to provide dependable, respectful support
+                        while helping individuals remain comfortable in the place
+                        they know best — home.
+                    </p>
+
+                    <a href="#contact" class="button button-primary">
+                        Talk With Our Team
+                    </a>
+                </div>
+
+                <div class="community-media">
+                    <img
+                        src="assets/images/services/services-care.jpg"
+                        alt="Caregiver and client receiving supportive care at home"
+                        loading="lazy"
+                    >
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =========================================
+             INSURANCE
+        ========================================== -->
+        <section id="insurance" class="insurance-section">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">Insurance & Plans</p>
+                    <h2>Plans We Work With.</h2>
+                    <p>
+                        Contact Tiger Home Health Care to confirm coverage,
+                        eligibility, and available services for your specific plan.
+                    </p>
+                </div>
+
+                <div class="insurance-grid">
+
+                    <div class="insurance-item">
+                        <div>
+                            <i class="fa-solid fa-shield-heart" aria-hidden="true"></i>
+                            <span>CareSource</span>
+                        </div>
+                    </div>
+
+                    <div class="insurance-item">
+                        <div>
+                            <i class="fa-solid fa-shield" aria-hidden="true"></i>
+                            <span>Passport by Molina Healthcare</span>
+                        </div>
+                    </div>
+
+                    <div class="insurance-item">
+                        <div>
+                            <i class="fa-solid fa-cross" aria-hidden="true"></i>
+                            <span>Anthem</span>
+                        </div>
+                    </div>
+
+                    <div class="insurance-item">
+                        <div>
+                            <i class="fa-solid fa-leaf" aria-hidden="true"></i>
+                            <span>Buckeye Health Plan</span>
+                        </div>
+                    </div>
+
+                    <div class="insurance-item">
+                        <div>
+                            <i class="fa-solid fa-users" aria-hidden="true"></i>
+                            <span>Molina Healthcare</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================
+             CALL TO ACTION
+        ========================================== -->
+        <section class="cta-section">
+            <div class="container cta-content">
+                <p class="section-label">Ready to Get Started?</p>
+                <h2>Let's Talk About Your Care Needs.</h2>
+                <p>
+                    Our team is available to answer questions and discuss
+                    available support services.
+                </p>
+
+                <a href="tel:+12168206422" class="button button-primary">
+                    <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                    Call 24/7 Support: 216-820-6422
+                </a>
+            </div>
+        </section>
+
+        <!-- =========================================
+             CONTACT
+        ========================================== -->
+        <section id="contact" class="contact-section">
+            <div class="container contact-grid">
+
+                <div class="contact-information">
+                    <p class="section-label">Contact Tiger</p>
+                    <h2>We're Here to Help.</h2>
+
+                    <p>
+                        Contact Tiger Home Health Care to learn more about
+                        services, insurance, referrals, and getting started.
+                    </p>
+
+                    <address>
+                        <p>
+                            <strong>Tiger Home Health Care, LLC</strong><br>
+                            11811 Shaker Blvd, Suite 120<br>
+                            Cleveland, OH 44120
+                        </p>
+
+                        <p>
+                            <strong>Office:</strong>
+                            <a href="tel:+12164903633">216-490-3633</a><br>
+
+                            <strong>Fax:</strong>
+                            877-335-2599
+                        </p>
+
+                        <p>
+                            <strong>24/7 Support:</strong>
+                            <a href="tel:+12168206422">216-820-6422</a>
+                        </p>
+
+                        <p>
+                            <strong>Email:</strong>
+                            <a href="mailto:info@tigerhomehealth.com">
+                                info@tigerhomehealth.com
+                            </a>
+                        </p>
+
+                        <p>
+                            <strong>Website:</strong>
+                            <a href="https://tigerhomehealth.com" target="_blank" rel="noopener">
+                                tigerhomehealth.com
+                            </a>
+                        </p>
+                    </address>
+                </div>
+
+                <div class="contact-form-container">
+                    <h2>Request Services</h2>
+
+                    <p>
+                        Complete the form below and our team can follow up.
+                    </p>
+
+                    <!--
+                        IMPORTANT:
+                        This is currently the HTML foundation only.
+                        It does not securely transmit information until a
+                        form-processing service/backend is connected.
+
+                        Avoid collecting sensitive medical information in this
+                        public form until the final secure workflow is selected.
+                    -->
+                    <form action="#" method="post" class="contact-form">
+
+                        <div class="form-field">
+                            <label for="name">Name</label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                autocomplete="name"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-field">
+                            <label for="phone">Phone</label>
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                autocomplete="tel"
+                            >
+                        </div>
+
+                        <div class="form-field">
+                            <label for="email">Email</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                autocomplete="email"
+                            >
+                        </div>
+
+                        <div class="form-field">
+                            <label for="service">What service are you interested in?</label>
+                            <select id="service" name="service">
+                                <option value="">Please select</option>
+                                <option>Personal Care</option>
+                                <option>Meal Preparation</option>
+                                <option>Personal Assistance</option>
+                                <option>Respite Care</option>
+                                <option>Homemaking</option>
+                                <option>Medication Reminders</option>
+                                <option>Errands</option>
+                                <option>Companionship</option>
+                                <option>Appointment Support</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="message">How can we help?</label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="5"
+                                placeholder="Please do not include sensitive medical information."
+                            ></textarea>
+                        </div>
+
+                        <button type="submit" class="button button-primary">
+                            Submit Request
+                        </button>
+
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+    <footer class="site-footer">
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div class="footer-brand">
+                    <img
+                        src="assets/images/logo/tiger-logo.png"
+                        alt="Tiger Home Health Care, LLC"
+                        class="footer-logo"
+                        loading="lazy"
+                    >
+
+                    <p>
+                        Compassionate Care.<br>
+                        Right at Home.
+                    </p>
+
+                    <p>
+                        Serving families with dignity, respect, and compassion.
+                    </p>
+                </div>
+
+                <div class="footer-contact">
+                    <h2>Contact</h2>
+
+                    <p>
+                        11811 Shaker Blvd, Suite 120<br>
+                        Cleveland, OH 44120
+                    </p>
+
+                    <p>
+                        <a href="tel:+12164903633">216-490-3633</a><br>
+                        <a href="tel:+12168206422">24/7: 216-820-6422</a>
+                    </p>
+
+                    <p>
+                        <a href="mailto:info@tigerhomehealth.com">
+                            info@tigerhomehealth.com
+                        </a>
+                    </p>
+                </div>
+
+                <div class="footer-navigation">
+                    <h2>Quick Links</h2>
+
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#who-we-serve">Who We Serve</a></li>
+                        <li><a href="#insurance">Insurance</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    &copy; <span id="current-year">2026</span>
+                    Tiger Home Health Care, LLC. All rights reserved.
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+
+    <!-- Small progressive-enhancement script -->
+    <script>
+        document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>    <!-- =========================================
          HEADER
          ========================================= -->
 
